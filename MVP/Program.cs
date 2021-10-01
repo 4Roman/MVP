@@ -17,7 +17,9 @@ namespace MVP
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            var presenter = new Presenter(new Form1()); // Dependency Injection presenter.Run(); }
+            var mainForm = new Form1();
+            var signInResultForm = new ViewSignInResultForm();
+            var presenter = new Presenter(mainForm,signInResultForm); // Dependency Injection presenter.Run(); }
             presenter.Run();
 
             //Application.SetHighDpiMode(HighDpiMode.SystemAware);

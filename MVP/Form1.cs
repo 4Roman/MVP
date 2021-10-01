@@ -17,7 +17,8 @@ namespace MVP
             InitializeComponent();
         }
 
-        public event Func<string, string,bool> TrySignIn;
+        public event Func<string, string,string,bool> TrySignIn;
+        public event Action<bool> ShowSignInResult;
 
         public void Show2()
         {
@@ -26,7 +27,8 @@ namespace MVP
 
         private void buttonSignIn_Click(object sender, EventArgs e)
         {
-            TrySignIn("Login","Password");
+            var isSuccess = TrySignIn("Login", "Password", "7777");
+            ShowSignInResult(isSuccess);
         }
 
     }

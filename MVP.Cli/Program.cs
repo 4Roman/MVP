@@ -7,7 +7,8 @@ namespace MVP.Cli
         static void Main(string[] args)
         {
             var view = new CliView();
-            var presenter = new Presenter(view) ;
+            var viewSignInResult = new CliViewSignInResult();
+            var presenter = new Presenter(view,viewSignInResult) ;
             presenter.Run();
         }
     }
