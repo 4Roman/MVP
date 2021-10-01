@@ -35,14 +35,16 @@ namespace MVP
             this.LabelLogin = new System.Windows.Forms.Label();
             this.LabelPassword = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBoxPincode = new System.Windows.Forms.TextBox();
+            this.labelPincode = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonSignIn
             // 
-            this.buttonSignIn.Location = new System.Drawing.Point(373, 335);
+            this.buttonSignIn.Location = new System.Drawing.Point(358, 394);
             this.buttonSignIn.Name = "buttonSignIn";
-            this.buttonSignIn.Size = new System.Drawing.Size(75, 23);
+            this.buttonSignIn.Size = new System.Drawing.Size(105, 29);
             this.buttonSignIn.TabIndex = 0;
             this.buttonSignIn.Text = "Sign In";
             this.buttonSignIn.UseVisualStyleBackColor = true;
@@ -97,11 +99,32 @@ namespace MVP
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
+            // textBoxPincode
+            // 
+            this.textBoxPincode.Location = new System.Drawing.Point(282, 365);
+            this.textBoxPincode.MaxLength = 100;
+            this.textBoxPincode.Name = "textBoxPincode";
+            this.textBoxPincode.PasswordChar = '*';
+            this.textBoxPincode.Size = new System.Drawing.Size(243, 23);
+            this.textBoxPincode.TabIndex = 7;
+            // 
+            // labelPincode
+            // 
+            this.labelPincode.AutoSize = true;
+            this.labelPincode.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelPincode.Location = new System.Drawing.Point(377, 341);
+            this.labelPincode.Name = "labelPincode";
+            this.labelPincode.Size = new System.Drawing.Size(65, 21);
+            this.labelPincode.TabIndex = 8;
+            this.labelPincode.Text = "Pincode";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelPincode);
+            this.Controls.Add(this.textBoxPincode);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.LabelPassword);
             this.Controls.Add(this.LabelLogin);
@@ -124,6 +147,8 @@ namespace MVP
         private System.Windows.Forms.Label LabelLogin;
         private System.Windows.Forms.Label LabelPassword;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox textBoxPincode;
+        private System.Windows.Forms.Label labelPincode;
     }
 }
 

@@ -27,7 +27,11 @@ namespace MVP
 
         private void buttonSignIn_Click(object sender, EventArgs e)
         {
-            var isSuccess = TrySignIn("Login", "Password", "7777");
+            var login = textBoxLogin.Text;
+            var password = textBoxPassword.Text;
+            var pincode = textBoxPincode.Text;
+
+            var isSuccess = TrySignIn(login,password,pincode);
             ShowSignInResult(isSuccess);
         }
 
