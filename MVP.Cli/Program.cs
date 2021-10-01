@@ -1,0 +1,14 @@
+﻿using System;
+
+namespace MVP.Cli
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var view = new CliView();
+            var presenter = new Presenter(view) ;
+            presenter.Run();
+        }
+    }
+}
