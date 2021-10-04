@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31613.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVP", "MVP\MVP.csproj", "{BF4AC34E-D7F5-4A9D-91AC-2474FEE6E1A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVP.Cli", "MVP.Cli\MVP.Cli.csproj", "{B48C06F7-0841-4180-86E5-359C81377598}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVP.Cli", "MVP.Cli\MVP.Cli.csproj", "{B48C06F7-0841-4180-86E5-359C81377598}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

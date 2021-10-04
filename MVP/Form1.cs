@@ -35,5 +35,10 @@ namespace MVP
             ShowSignInResult(isSuccess);
         }
 
+        private void buttonSendPincode_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
