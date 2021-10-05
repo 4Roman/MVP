@@ -25,13 +25,13 @@ public class User
         return pincode;
     }
     public void SendPincode(string eMailLogin, string eMailpassword, string login, string pincode)
-    {        
+    {
         using (MailMessage mail = new MailMessage())
         {
             mail.From = new MailAddress(eMailLogin);
             mail.To.Add(login);
             mail.Subject = "Hello World";
-            mail.Body = "<h1>"+pincode+"</h1>";
+            mail.Body = "<h1>" + pincode + "</h1>";
             mail.IsBodyHtml = true;
 
             using (SmtpClient smtp = new SmtpClient("smtp.mail.ru", 25))

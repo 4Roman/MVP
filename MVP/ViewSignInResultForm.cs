@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace MVP
 {
-    public class ViewSignInResultForm: IViewSignInResult
+    public class ViewSignInResultForm : IViewSignInResult
     {
         public ViewSignInResultForm()
         {

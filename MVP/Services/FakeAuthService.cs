@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MVP.Services
+﻿namespace MVP.Services
 {
     /// <summary>
     /// Всегда успешная авторизация

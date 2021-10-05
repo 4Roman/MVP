@@ -1,12 +1,6 @@
-using LiteDB;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Net;
-using System.Net.Mail;
 using MVP.Services;
+using System;
+using System.Windows.Forms;
 
 namespace MVP
 {
@@ -26,7 +20,7 @@ namespace MVP
             //    password = args[1];
             //    destination = args[2];
             //}
-            
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             var mainForm = new Form1();
@@ -35,7 +29,7 @@ namespace MVP
             var authService = new LocalDbAuthService();
             var presenter = new Presenter(mainForm, signInResultForm, authService);
             presenter.Run();
-        }           
+        }
 
     }
 }
