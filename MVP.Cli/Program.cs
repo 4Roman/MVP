@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVP.Services;
+using System;
 
 namespace MVP.Cli
 {
@@ -8,7 +9,8 @@ namespace MVP.Cli
         {
             var view = new CliView();
             var viewSignInResult = new CliViewSignInResult();
-            var presenter = new Presenter(view,viewSignInResult) ;
+            var authService = new LocalDbAuthService();
+            var presenter = new Presenter(view,viewSignInResult, authService);
             presenter.Run();
         }
     }

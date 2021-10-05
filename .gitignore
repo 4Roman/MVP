@@ -363,3 +363,5 @@ MigrationBackup/
 FodyWeavers.xsd
 # Launch settings with secrets
 launchSettings.json
+# DataBase with secrets
+UserDataBase.db
