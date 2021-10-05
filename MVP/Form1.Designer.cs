@@ -45,9 +45,6 @@ namespace MVP
             // 
             // LabelLogin
             // 
-            this.LabelLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.LabelLogin.AutoSize = true;
             this.LabelLogin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LabelLogin.Location = new System.Drawing.Point(224, 225);
@@ -58,9 +55,6 @@ namespace MVP
             // 
             // textBoxLogin
             // 
-            this.textBoxLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxLogin.Location = new System.Drawing.Point(110, 250);
             this.textBoxLogin.MaxLength = 100;
             this.textBoxLogin.Name = "textBoxLogin";
@@ -70,22 +64,16 @@ namespace MVP
             // 
             // LabelPassword
             // 
-            this.LabelPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.LabelPassword.AutoSize = true;
             this.LabelPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LabelPassword.Location = new System.Drawing.Point(209, 276);
             this.LabelPassword.Name = "LabelPassword";
-            this.LabelPassword.Size = new System.Drawing.Size(76, 21);
+            this.LabelPassword.Size = new System.Drawing.Size(77, 21);
             this.LabelPassword.TabIndex = 5;
             this.LabelPassword.Text = "Password";
             // 
             // textBoxPassword
             // 
-            this.textBoxPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxPassword.Location = new System.Drawing.Point(110, 300);
             this.textBoxPassword.MaxLength = 100;
             this.textBoxPassword.Name = "textBoxPassword";
@@ -96,9 +84,6 @@ namespace MVP
             // 
             // textBoxPincode
             // 
-            this.textBoxPincode.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxPincode.Location = new System.Drawing.Point(110, 347);
             this.textBoxPincode.Margin = new System.Windows.Forms.Padding(0);
             this.textBoxPincode.MaxLength = 100;
@@ -110,9 +95,6 @@ namespace MVP
             // 
             // buttonSignIn
             // 
-            this.buttonSignIn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSignIn.Location = new System.Drawing.Point(260, 391);
             this.buttonSignIn.Name = "buttonSignIn";
             this.buttonSignIn.Size = new System.Drawing.Size(114, 39);
@@ -123,9 +105,6 @@ namespace MVP
             // 
             // labelPincode
             // 
-            this.labelPincode.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelPincode.AutoSize = true;
             this.labelPincode.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelPincode.Location = new System.Drawing.Point(214, 325);
@@ -136,9 +115,6 @@ namespace MVP
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::MVP.Properties.Resources.pngwing_com;
             this.pictureBox1.InitialImage = global::MVP.Properties.Resources.pngwing_com;
             this.pictureBox1.Location = new System.Drawing.Point(110, 16);
@@ -167,9 +143,6 @@ namespace MVP
             // 
             // buttonSendPincode
             // 
-            this.buttonSendPincode.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSendPincode.Location = new System.Drawing.Point(110, 391);
             this.buttonSendPincode.Name = "buttonSendPincode";
             this.buttonSendPincode.Size = new System.Drawing.Size(130, 39);
@@ -185,7 +158,7 @@ namespace MVP
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(487, 442);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MinimumSize = new System.Drawing.Size(503, 480);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
