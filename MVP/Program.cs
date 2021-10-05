@@ -12,17 +12,13 @@ namespace MVP
 {
     static class Program
     {
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
         [STAThread]
         public static void Main(string[] args)
         {
-            //SetupDb();
+            Model.SetupDb();
             string login;
             string password;
             string destination;
-
             if (args?.Length < 2) throw new Exception("Отсутствуют данные для авторизации");
             else 
             {
@@ -30,43 +26,17 @@ namespace MVP
                 password = args[1];
                 destination = args[2];
 
-            }           
-           
+            }
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             var mainForm = new Form1();
-                        var signInResultForm = new ViewSignInResultForm();
-            var presenter = new Presenter(mainForm,signInResultForm); // Dependency Injection presenter.Run(); }
+            var signInResultForm = new ViewSignInResultForm();
+            var presenter = new Presenter(mainForm,signInResultForm); 
             presenter.Run();
 
             
-           
-            //Application.SetHighDpiMode(HighDpiMode.SystemAware);
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Form1());
-            
-        }
-
-
-        public static void SetupDb()
-        {
-            using (var db = new LiteDatabase(@"UserDataBase.db"))
-            {
-                
-                var col = db.GetCollection<Users>("Users");
-                var allCustomers = col.FindAll().ToList();                
-                var user = new Users
-                {
-                    login = "matveev.romon",
-                    password = "MaTVei",
-                    pincode = "7777"
-                    
-                };                
-                col.Insert(user);
-            }
-
-        }       
+        }           
 
     }
 }

@@ -7,7 +7,7 @@ public class Users
     public string login { get; set; }
     public string password { get; set; }
     public string pincode { get; set; }
-    public bool record { get; set; }
+    public int record { get; set; }
 
     public static string CreatePincode()
     {
