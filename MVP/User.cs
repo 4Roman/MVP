@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Net;
-using System.Net.Mail;
+
 
 public class User
 {
@@ -24,24 +23,6 @@ public class User
         string pincode = value.ToString();
         return pincode;
     }
-    public void SendPincode(string eMailLogin, string eMailpassword, string login, string pincode)
-    {
-        using (MailMessage mail = new MailMessage())
-        {
-            mail.From = new MailAddress(eMailLogin);
-            mail.To.Add(login);
-            mail.Subject = "Hello World";
-            mail.Body = "<h1>" + pincode + "</h1>";
-            mail.IsBodyHtml = true;
-
-            using (SmtpClient smtp = new SmtpClient("smtp.mail.ru", 25))
-            {
-                smtp.Credentials = new NetworkCredential(eMailLogin, eMailpassword);
-                smtp.EnableSsl = true;
-                smtp.Send(mail);
-            }
-        }
-
-    }
+    
 }
 

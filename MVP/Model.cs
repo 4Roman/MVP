@@ -1,5 +1,7 @@
 ﻿using LiteDB;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 
 namespace MVP
 {
@@ -19,6 +21,26 @@ namespace MVP
                 //string pin = "c";
                 //var tempUser = new User(login, pass, pin);
                 //col.Insert(tempUser);
+            }
+
+        }
+
+        public void SendPincode(string eMailLogin, string eMailpassword, string login, string pincode)
+        {
+            using (MailMessage mail = new MailMessage())
+            {
+                mail.From = new MailAddress(eMailLogin);
+                mail.To.Add(login);
+                mail.Subject = "Your pincode";
+                mail.Body = "<h1>" + pincode + "</h1>";
+                mail.IsBodyHtml = true;
+
+                using (SmtpClient smtp = new SmtpClient("smtp.mail.ru", 25))
+                {
+                    smtp.Credentials = new NetworkCredential(eMailLogin, eMailpassword);
+                    smtp.EnableSsl = true;
+                    smtp.Send(mail);
+                }
             }
 
         }

@@ -59,7 +59,7 @@ namespace MVP
             this.textBoxLogin.MaxLength = 100;
             this.textBoxLogin.Name = "textBoxLogin";
             this.textBoxLogin.Size = new System.Drawing.Size(264, 23);
-            this.textBoxLogin.TabIndex = 3;
+            this.textBoxLogin.TabIndex = 1;
             this.textBoxLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // LabelPassword
@@ -68,7 +68,7 @@ namespace MVP
             this.LabelPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LabelPassword.Location = new System.Drawing.Point(209, 276);
             this.LabelPassword.Name = "LabelPassword";
-            this.LabelPassword.Size = new System.Drawing.Size(77, 21);
+            this.LabelPassword.Size = new System.Drawing.Size(76, 21);
             this.LabelPassword.TabIndex = 5;
             this.LabelPassword.Text = "Password";
             // 
@@ -90,7 +90,7 @@ namespace MVP
             this.textBoxPincode.Name = "textBoxPincode";
             this.textBoxPincode.PasswordChar = '*';
             this.textBoxPincode.Size = new System.Drawing.Size(264, 23);
-            this.textBoxPincode.TabIndex = 7;
+            this.textBoxPincode.TabIndex = 3;
             this.textBoxPincode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // buttonSignIn
@@ -98,7 +98,7 @@ namespace MVP
             this.buttonSignIn.Location = new System.Drawing.Point(260, 391);
             this.buttonSignIn.Name = "buttonSignIn";
             this.buttonSignIn.Size = new System.Drawing.Size(114, 39);
-            this.buttonSignIn.TabIndex = 0;
+            this.buttonSignIn.TabIndex = 5;
             this.buttonSignIn.Text = "Sign in";
             this.buttonSignIn.UseVisualStyleBackColor = true;
             this.buttonSignIn.Click += new System.EventHandler(this.buttonSignIn_Click);
@@ -146,7 +146,7 @@ namespace MVP
             this.buttonSendPincode.Location = new System.Drawing.Point(110, 391);
             this.buttonSendPincode.Name = "buttonSendPincode";
             this.buttonSendPincode.Size = new System.Drawing.Size(130, 39);
-            this.buttonSendPincode.TabIndex = 9;
+            this.buttonSendPincode.TabIndex = 4;
             this.buttonSendPincode.Text = "Send pincode";
             this.buttonSendPincode.UseVisualStyleBackColor = true;
             this.buttonSendPincode.Click += new System.EventHandler(this.buttonSendPincode_Click);
