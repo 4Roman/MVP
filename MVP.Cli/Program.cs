@@ -7,7 +7,7 @@ namespace MVP.Cli
         static void Main(string[] args)
         {
             var view = new CliView();
-            var viewSignInResult = new CliViewSignInResult();
+            var viewSignInResult = new CliViewAuthResult();
             var authService = new LocalDbAuthService();
             var presenter = new Presenter(view, viewSignInResult, authService);
             presenter.Run();

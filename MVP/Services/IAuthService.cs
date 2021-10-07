@@ -2,6 +2,8 @@
 {
     public interface IAuthService
     {
-        User TryAuth(string login, string pass, string pincode);
+        User DbCheckLogAndPass(string login, string pass);
+
+        User DbCheckPincode(string pincode);
     }
 }

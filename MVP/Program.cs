@@ -24,11 +24,12 @@ namespace MVP
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             var mainForm = new Form1();
-            var signInResultForm = new ViewSignInResultForm();
+            var signInResultForm = new ViewAuthResultForm();
             //var authService = new FakeAuthService();
             var authService = new LocalDbAuthService();
-            var presenter = new Presenter(mainForm, signInResultForm, authService);
+            var presenter = new Presenter(mainForm, signInResultForm, authService);                      
             presenter.Run();
+            
         }
 
     }

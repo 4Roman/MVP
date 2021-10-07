@@ -13,9 +13,9 @@ namespace MVP.Services
         {
             _connectionString = connectionString;
             _db = new LiteDatabase(connectionString);
-        }
+        }        
 
-        public User TryAuth(string login, string pass, string pincode)
+        public User DbCheckLogAndPass(string login, string pass)
         {
             // сходить в базу, поискать юзера
             var col = _db.GetCollection<User>("Users");
@@ -23,13 +23,27 @@ namespace MVP.Services
 
             //Выбор юзера по логину
             //var loginToSearchFor = login;
-            var user = allUsers.FirstOrDefault(u => u.login == login && u.password == pass && u.pincode == pincode);
+            var user = allUsers.FirstOrDefault(u => u.login == login && u.password == pass);
             //if (user == null) throw new Exception("no user with this login");
             //}
 
             return user;
         }
 
+        public User DbCheckPincode(string pincode)
+        {
+            // сходить в базу, поискать юзера
+            var col = _db.GetCollection<User>("Users");
+            var allUsers = col.FindAll().ToList();
+
+            //Выбор юзера по логину
+            //var loginToSearchFor = login;
+            var user = allUsers.FirstOrDefault(u =>  u.pincode == pincode);
+            //if (user == null) throw new Exception("no user with this login");
+            //}
+
+            return user;
+        }
 
         public void Dispose()
         {

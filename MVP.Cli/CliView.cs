@@ -4,21 +4,33 @@ namespace MVP.Cli
 {
     class CliView : IView
     {
-        public event Func<string, string, string, bool> TrySignIn;
-        public event Action<bool> ShowSignInResult;
+        public event Func<string, string, bool> ViewCheckLogAndPass;
+        public event Action<bool> ViewShowCheckLogAndPassResult;        
+        public event Func<string, bool> ViewCheckPincode;
+        public event Action<bool> ViewShowCheckPincodeResult;
 
         public void Show2()
         {
-            Console.WriteLine("Введите логин: ");
-            var login = Console.ReadLine();
-            Console.WriteLine("Введите пароль: ");
-            var password = Console.ReadLine();
-            Console.WriteLine("Введите пинкод: ");
-            var pincode = Console.ReadLine();
+            var isSuccess = false;
+            while (!isSuccess)
+            {
+                Console.WriteLine("Введите логин: ");
+                var login = Console.ReadLine();
+                Console.WriteLine("Введите пароль: ");
+                var password = Console.ReadLine();
+                isSuccess = ViewCheckLogAndPass(login, password);
+                ViewShowCheckLogAndPassResult(isSuccess);
+            }
 
-            var isSuccess = TrySignIn(login, password, pincode);
-            ShowSignInResult(isSuccess);
-
+            isSuccess = false;
+            while (!isSuccess)
+            {
+                Console.WriteLine("Введите Пинкод: ");
+                var pincode = Console.ReadLine();
+                isSuccess = ViewCheckPincode(pincode);
+                ViewShowCheckPincodeResult(isSuccess);
+            }
         }
+        
     }
 }

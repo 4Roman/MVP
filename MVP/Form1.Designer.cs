@@ -38,7 +38,6 @@ namespace MVP
             this.labelPincode = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonSendPincode = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -84,6 +83,8 @@ namespace MVP
             // 
             // textBoxPincode
             // 
+            this.textBoxPincode.Enabled = false;
+            this.textBoxPincode.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textBoxPincode.Location = new System.Drawing.Point(110, 347);
             this.textBoxPincode.Margin = new System.Windows.Forms.Padding(0);
             this.textBoxPincode.MaxLength = 100;
@@ -95,7 +96,7 @@ namespace MVP
             // 
             // buttonSignIn
             // 
-            this.buttonSignIn.Location = new System.Drawing.Point(260, 391);
+            this.buttonSignIn.Location = new System.Drawing.Point(183, 382);
             this.buttonSignIn.Name = "buttonSignIn";
             this.buttonSignIn.Size = new System.Drawing.Size(114, 39);
             this.buttonSignIn.TabIndex = 5;
@@ -126,7 +127,6 @@ namespace MVP
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.buttonSendPincode);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.labelPincode);
             this.panel1.Controls.Add(this.buttonSignIn);
@@ -140,16 +140,6 @@ namespace MVP
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(487, 442);
             this.panel1.TabIndex = 9;
-            // 
-            // buttonSendPincode
-            // 
-            this.buttonSendPincode.Location = new System.Drawing.Point(110, 391);
-            this.buttonSendPincode.Name = "buttonSendPincode";
-            this.buttonSendPincode.Size = new System.Drawing.Size(130, 39);
-            this.buttonSendPincode.TabIndex = 4;
-            this.buttonSendPincode.Text = "Send pincode";
-            this.buttonSendPincode.UseVisualStyleBackColor = true;
-            this.buttonSendPincode.Click += new System.EventHandler(this.buttonSendPincode_Click);
             // 
             // Form1
             // 
@@ -180,7 +170,6 @@ namespace MVP
         private System.Windows.Forms.Label labelPincode;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button buttonSendPincode;
     }
 }
 
