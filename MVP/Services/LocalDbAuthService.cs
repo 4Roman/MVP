@@ -6,6 +6,9 @@ namespace MVP.Services
 {
     public class LocalDbAuthService : IAuthService, IDisposable
     {
+        public string Name = "LiteDb";
+        public string SomeInfo = "SomeInfo";
+
         private readonly string _connectionString;// = "../../../../UserDataBase.db";
         private readonly LiteDatabase _db;
 

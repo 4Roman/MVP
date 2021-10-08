@@ -11,6 +11,7 @@ namespace MVP.Cli
 
         public void Show2()
         {
+
             var isSuccess = false;
             while (!isSuccess)
             {
