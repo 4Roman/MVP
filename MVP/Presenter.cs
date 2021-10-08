@@ -4,6 +4,8 @@ namespace MVP
 {
     public class Presenter
     {
+        private static NLog.Logger _logger = NLog.LogManager.GetCurrentClassLogger();
+
         private IView _view;
         private IViewAuthResult _viewSignInResult;
         private IAuthService _authService;
@@ -25,6 +27,8 @@ namespace MVP
 
         bool PrCheckLogAndPass(string login, string password)  //проверка логина и пароля
         {
+            _logger.Info("Try check login");
+
             var user = _authService.DbCheckLogAndPass(login, password);
             if (user != null) return true;
             else return false;

@@ -12,6 +12,8 @@ namespace MVP
         public static void Main(string[] args)
         {
             _logger.Info("App started");
+            for (int i = 0; i<300; i++)
+                _logger.Info("adxczxc");
             //Model.SetupDb();
             //string login;
             //string password;
