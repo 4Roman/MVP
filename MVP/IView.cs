@@ -22,7 +22,7 @@ namespace MVP
         }
         private bool ValidateLogin(string login)
         {
-            if (string.IsNullOrWhiteSpace(login))
+            if (string.IsNullOrWhiteSpace(login) || (login.Length >= 30))
                 return false;
             else return true;
         }
