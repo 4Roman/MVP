@@ -36,5 +36,23 @@ namespace MVP.Cli.Tests
             Assert.IsTrue(wasCalled);
             //this.mockRepository.VerifyAll();
         }
+
+        [Test]
+        public void Show_TrySignInWithLoginMoreThen30_ShouldNotifyUserAboutProblem()
+        {
+            // Arrange
+            IView view = new Form1() as IView;
+            //var x = form1.Controls.Find("buttonSignIn", true)[0] as System.Windows.Forms.Button;            
+            //foo.NyEvent += delegate (o, e) { wasCalled = true; }
+            string login = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+            string pass = "qweasdzxc";
+
+            // Act
+            var isValid = view.ValidateLoginPass(login, pass);
+
+            // Assert
+            Assert.IsFalse(isValid);
+            //this.mockRepository.VerifyAll();
+        }
     }
 }
