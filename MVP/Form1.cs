@@ -14,41 +14,50 @@ namespace MVP
         public event Action<bool> ViewShowCheckLogAndPassResult;
         public event Func<string, bool> ViewCheckPincode;
         public event Action<bool> ViewShowCheckPincodeResult;
+        public event Action LoginOrPassAreInvalid;
 
         bool loginAndPasswordChecked = false;
 
-
-
-        public void Show2()
+        public new void Show()
         {
             this.ShowDialog();
         }
-
-        private void buttonSignIn_Click(object sender, EventArgs e)
+        public void ShowInfoMessage(string message)
+        {
+            MessageBox.Show(message, "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        public void buttonSignIn_Click(object sender, EventArgs e)
         {
             var login = textBoxLogin.Text;
             var password = textBoxPassword.Text;
             var pincode = textBoxPincode.Text;
-            if (!loginAndPasswordChecked)
+
+            bool areLoginAndPasswordValid = (this as IView).ValidateLoginPass(login, password);
+            if (!areLoginAndPasswordValid)
             {
-                var isSuccess = ViewCheckLogAndPass(login, password);
-                ViewShowCheckLogAndPassResult(isSuccess);
-                if (isSuccess)
-                {
-                    loginAndPasswordChecked = true;
-                    textBoxPincode.Enabled = true;
-                    textBoxLogin.Enabled = false;
-                    textBoxPassword.Enabled = false;
-                }
+                LoginOrPassAreInvalid();
             }
             else
             {
-                login = textBoxLogin.Text;
-                var isSuccess = ViewCheckPincode(pincode);
-                ViewShowCheckPincodeResult(isSuccess);
+                bool isLoginAndPasswordChecked1 = loginAndPasswordChecked;
+                if (!isLoginAndPasswordChecked1)
+                {
+                    var isSuccess = ViewCheckLogAndPass(login, password);
+                    ViewShowCheckLogAndPassResult(isSuccess);
+                    if (isSuccess)
+                    {
+                        loginAndPasswordChecked = true;
+                        textBoxPincode.Enabled = true;
+                        textBoxLogin.Enabled = false;
+                        textBoxPassword.Enabled = false;
+                    }
+                }
+                else
+                {
+                    var isSuccess = ViewCheckPincode(pincode);
+                    ViewShowCheckPincodeResult(isSuccess);
+                }
             }
         }
-
-
     }
 }

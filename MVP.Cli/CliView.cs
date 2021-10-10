@@ -8,8 +8,14 @@ namespace MVP.Cli
         public event Action<bool> ViewShowCheckLogAndPassResult;
         public event Func<string, bool> ViewCheckPincode;
         public event Action<bool> ViewShowCheckPincodeResult;
+        public event Action LoginOrPassAreInvalid;
 
-        public void Show2()
+        public void ShowInfoMessage(string message)
+        {
+            Console.WriteLine(message);
+        }
+
+        public new void Show()
         {
 
             var isSuccess = false;
@@ -19,8 +25,18 @@ namespace MVP.Cli
                 var login = Console.ReadLine();
                 Console.WriteLine("Введите пароль: ");
                 var password = Console.ReadLine();
-                isSuccess = ViewCheckLogAndPass(login, password);
-                ViewShowCheckLogAndPassResult(isSuccess);
+
+                bool areLoginAndPasswordInvalid = !(this as IView).ValidateLoginPass(login, password);
+                if (areLoginAndPasswordInvalid)
+                {
+                    LoginOrPassAreInvalid();
+                }
+                else
+                {
+
+                    isSuccess = ViewCheckLogAndPass(login, password);
+                    ViewShowCheckLogAndPassResult(isSuccess);
+                }
             }
 
             isSuccess = false;

@@ -18,11 +18,12 @@ namespace MVP
             _view.ViewCheckPincode += PrCheckPincode;
             _view.ViewShowCheckPincodeResult += PrShowCheckPincodeResult;
             _viewSignInResult = viewSignInResult;
+            _view.LoginOrPassAreInvalid += PrLoginOrPassAreInvalid;
             _authService = authService;
         }
         public void Run()
         {
-            _view.Show2();
+            _view.Show();
         }
 
         bool PrCheckLogAndPass(string login, string password)  //проверка логина и пароля
@@ -47,9 +48,11 @@ namespace MVP
         {
             _viewSignInResult.ShowPincodeResult(success);
         }
-
-
-
-
+        void PrLoginOrPassAreInvalid()
+        {
+            string message = "Логин или пароль заполнены не корректно";
+            _logger.Info(message);
+            _view.ShowInfoMessage(message);
+        }
     }
 }
