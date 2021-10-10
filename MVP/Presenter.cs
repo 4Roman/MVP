@@ -35,8 +35,8 @@ namespace MVP
         }
         void PrShowCheckLogAndPassResult(bool success)  // результат проверки логина и пароля
         {
-            _viewSignInResult.ShowLogAndPassResult(success);           
-        }        
+            _viewSignInResult.ShowLogAndPassResult(success);
+        }
         bool PrCheckPincode(string pincode)  //проверка пинкода
         {
             var user = _authService.DbCheckPincode(pincode);

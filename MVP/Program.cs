@@ -1,6 +1,6 @@
-using MVP.Services;
 using System;
 using System.Windows.Forms;
+using MVP.Services;
 
 namespace MVP
 {
@@ -12,7 +12,7 @@ namespace MVP
         public static void Main(string[] args)
         {
             _logger.Info("App started");
-            for (int i = 0; i<300; i++)
+            for (int i = 0; i < 300; i++)
                 _logger.Info("adxczxc");
             //Model.SetupDb();
             //string login;
@@ -33,9 +33,9 @@ namespace MVP
             //var authService = new FakeAuthService();
             var authService = new LocalDbAuthService();
             _logger.Info("Current authService is " + authService.Name + " SomeInfo: " + authService.SomeInfo);
-            var presenter = new Presenter(mainForm, signInResultForm, authService);                      
+            var presenter = new Presenter(mainForm, signInResultForm, authService);
             presenter.Run();
-            
+
         }
 
     }

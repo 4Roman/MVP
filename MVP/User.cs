@@ -23,6 +23,6 @@ public class User
         string pincode = value.ToString();
         return pincode;
     }
-    
+
 }
 

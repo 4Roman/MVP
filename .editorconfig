@@ -88,4 +88,4 @@ dotnet_style_qualification_for_field = false:suggestion
 insert_final_newline=true
 
 [*.{cs,vb}]
-end_of_line=lf
+end_of_line=crlf

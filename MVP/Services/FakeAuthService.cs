@@ -4,11 +4,11 @@
     /// Всегда успешная авторизация
     /// </summary>
     public class FakeAuthService : IAuthService
-    {    
+    {
 
         public User DbCheckLogAndPass(string login, string pass)
         {
-            var fakeUser = new User(login, pass,pass);
+            var fakeUser = new User(login, pass, pass);
             fakeUser.record = 666;
             return fakeUser;
         }

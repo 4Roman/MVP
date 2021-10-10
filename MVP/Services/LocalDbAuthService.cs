@@ -1,6 +1,6 @@
-﻿using LiteDB;
-using System;
+﻿using System;
 using System.Linq;
+using LiteDB;
 
 namespace MVP.Services
 {
@@ -16,7 +16,7 @@ namespace MVP.Services
         {
             _connectionString = connectionString;
             _db = new LiteDatabase(connectionString);
-        }        
+        }
 
         public User DbCheckLogAndPass(string login, string pass)
         {
@@ -41,7 +41,7 @@ namespace MVP.Services
 
             //Выбор юзера по логину
             //var loginToSearchFor = login;
-            var user = allUsers.FirstOrDefault(u =>  u.pincode == pincode);
+            var user = allUsers.FirstOrDefault(u => u.pincode == pincode);
             //if (user == null) throw new Exception("no user with this login");
             //}
 

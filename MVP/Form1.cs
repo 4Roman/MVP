@@ -4,7 +4,7 @@ using System.Windows.Forms;
 namespace MVP
 {
     public partial class Form1 : Form, IView
-    {        
+    {
         public Form1()
         {
             InitializeComponent();
@@ -30,7 +30,7 @@ namespace MVP
             var password = textBoxPassword.Text;
             var pincode = textBoxPincode.Text;
             if (!loginAndPasswordChecked)
-            {                
+            {
                 var isSuccess = ViewCheckLogAndPass(login, password);
                 ViewShowCheckLogAndPassResult(isSuccess);
                 if (isSuccess)
@@ -41,7 +41,7 @@ namespace MVP
                     textBoxPassword.Enabled = false;
                 }
             }
-            else 
+            else
             {
                 login = textBoxLogin.Text;
                 var isSuccess = ViewCheckPincode(pincode);

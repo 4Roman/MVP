@@ -5,10 +5,13 @@ namespace MVP.Cli
     public class CliViewAuthResult : IViewAuthResult
     {
         public CliViewAuthResult()
-        {           
+        {
         }
 
-        
+        public static int Sum(int a, int b)
+        {
+            return a + b;
+        }
 
         public void ShowLogAndPassResult(bool success) //проверка логина и пароля в mainForm
         {

@@ -5,7 +5,7 @@ namespace MVP.Cli
     class CliView : IView
     {
         public event Func<string, string, bool> ViewCheckLogAndPass;
-        public event Action<bool> ViewShowCheckLogAndPassResult;        
+        public event Action<bool> ViewShowCheckLogAndPassResult;
         public event Func<string, bool> ViewCheckPincode;
         public event Action<bool> ViewShowCheckPincodeResult;
 
@@ -32,6 +32,6 @@ namespace MVP.Cli
                 ViewShowCheckPincodeResult(isSuccess);
             }
         }
-        
+
     }
 }
