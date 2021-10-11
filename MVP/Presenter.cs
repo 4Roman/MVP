@@ -26,7 +26,7 @@ namespace MVP
             _view.Show();
         }
 
-        bool PrCheckLogAndPass(string login, string password)  //проверка логина и пароля
+        public bool PrCheckLogAndPass(string login, string password)  //проверка логина и пароля
         {
             _logger.Info("Try check login");
 

@@ -54,5 +54,6 @@ namespace MVP.Cli.Tests
             Assert.IsFalse(isValid);
             //this.mockRepository.VerifyAll();
         }
+
     }
 }
